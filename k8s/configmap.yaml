@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: os-service-config
+data:
+  DB_HOST: "os-service-postgres"
+  DB_PORT: "5432"
+  DB_USER: "postgres"
+  DB_NAME: "os_service"
+  PORT: "3000"
+  RABBITMQ_URL: "amqp://guest:guest@rabbitmq:5672"

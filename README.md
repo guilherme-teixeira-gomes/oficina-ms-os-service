@@ -88,3 +88,24 @@ Pipeline automática (GitHub Actions):
 3. Deploy no cluster Kubernetes (EKS)
 
 O serviço possui **banco PostgreSQL próprio e isolado** (`k8s/postgres.yaml`) — nenhum outro serviço acessa este banco.
+
+
+## Cobertura de Testes
+
+30 testes (unitários, integração e BDD). Cobertura ~94% (mínimo exigido: 80%).
+
+Para gerar o relatório localmente:
+```bash
+npm run test:coverage
+```
+
+| Métrica | Cobertura |
+|---------|-----------|
+| Statements | 93,7% |
+| Lines | 94,2% |
+| Functions | 80% |
+
+## Documentação da API (Swagger)
+
+Com o serviço rodando, acesse: **http://localhost:3001/api-docs**
+(porta 3000 quando rodando fora do docker-compose)
